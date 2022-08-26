@@ -1,0 +1,17 @@
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.BL.deps.json
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.BL.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.BL.pdb
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.Common.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.DL.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.Common.pdb
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\bin\Debug\net6.0\MISA.Web07.GD.ndquang.DL.pdb
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.csproj.AssemblyReference.cache
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.GeneratedMSBuildEditorConfig.editorconfig
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.AssemblyInfoInputs.cache
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.AssemblyInfo.cs
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.csproj.CoreCompileInputs.cache
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.csproj.CopyComplete
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\refint\MISA.Web07.GD.ndquang.BL.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\MISA.Web07.GD.ndquang.BL.pdb
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.BL\obj\Debug\net6.0\ref\MISA.Web07.GD.ndquang.BL.dll

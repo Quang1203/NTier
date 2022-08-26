@@ -1,0 +1,191 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.BL\\MISA.Web07.GD.ndquang.BL.csproj": {}
+  },
+  "projects": {
+    "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.BL\\MISA.Web07.GD.ndquang.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.BL\\MISA.Web07.GD.ndquang.BL.csproj",
+        "projectName": "MISA.Web07.GD.ndquang.BL",
+        "projectPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.BL\\MISA.Web07.GD.ndquang.BL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj": {
+                "projectPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj"
+              },
+              "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.DL\\MISA.Web07.GD.ndquang.DL.csproj": {
+                "projectPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.DL\\MISA.Web07.GD.ndquang.DL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj",
+        "projectName": "MISA.Web07.GD.ndquang.Common",
+        "projectPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.DL\\MISA.Web07.GD.ndquang.DL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.DL\\MISA.Web07.GD.ndquang.DL.csproj",
+        "projectName": "MISA.Web07.GD.ndquang.DL",
+        "projectPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.DL\\MISA.Web07.GD.ndquang.DL.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.DL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj": {
+                "projectPath": "E:\\MISA\\MISA.Web07.gd.ndquang\\MISA.Web07.GD.ndquang.Common\\MISA.Web07.GD.ndquang.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
