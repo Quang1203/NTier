@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BaseBL\BaseBL.cs~RF1d6eeff8.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MISA.Web07.GD.ndquang.Common\MISA.Web07.GD.ndquang.Common.csproj" />
     <ProjectReference Include="..\MISA.Web07.GD.ndquang.DL\MISA.Web07.GD.ndquang.DL.csproj" />
   </ItemGroup>

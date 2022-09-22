@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MISA.Web07.GD.ndquang.BL;
 using MISA.Web07.GD.ndquang.Common.Entity;
 using MISA.Web07.GD.ndquang.Common.Entity.DTO;
+using MISA.Web07.GD.ndquang.Common.Resources;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace MISA.Web07.GD.ndquang.API.NTier
@@ -52,13 +53,13 @@ namespace MISA.Web07.GD.ndquang.API.NTier
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, "e002");
+                    return StatusCode(StatusCodes.Status400BadRequest, Resource.failedOperation);
                 }
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
             }
         }
 
@@ -84,7 +85,7 @@ namespace MISA.Web07.GD.ndquang.API.NTier
             [FromQuery] Guid? groupID,
             [FromQuery] Guid? storageRoomID,
             [FromQuery] Guid? subjectID,
-            [FromQuery] int pageSize = 10,
+            [FromQuery] int pageSize = 100,
             [FromQuery] int pageNumber = 1)
         {
             try
@@ -99,18 +100,51 @@ namespace MISA.Web07.GD.ndquang.API.NTier
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, "e002");
+                    return StatusCode(StatusCodes.Status404NotFound);
                 }
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
             }
         }
 
         /// <summary>
         /// API Lấy thông tin chi tiết của 1 nhân viên
+        /// </summary>
+        /// <param name="employeeCode">ID của nhân viên muốn lấy thông tin chi tiết</param>
+        /// <returns>Đối tượng nhân viên muốn lấy thông tin chi tiết</returns>
+        /// Created by: NDQuang (17/08/2022)
+        [HttpGet("duplicateEmployeeCode/{employeeCode}")]
+        [SwaggerResponse(StatusCodes.Status200OK, type: typeof(string))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest)]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError)]
+        public IActionResult CheckDuplicateEmployeeCode([FromRoute] string employeeCode)
+        {
+            try
+            {
+                var employee = _employeeBL.CheckDuplicateEmployeeCode(employeeCode);
+
+                // Xử lý kết quả trả về từ DB
+                if (employee != null)
+                {
+                    return StatusCode(StatusCodes.Status200OK, employee);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status200OK, "OK");
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
+            }
+        }
+
+        /// <summary>
+        /// API Kiểm tra trùng mã nhân viên
         /// </summary>
         /// <param name="employeeID">ID của nhân viên muốn lấy thông tin chi tiết</param>
         /// <returns>Đối tượng nhân viên muốn lấy thông tin chi tiết</returns>
@@ -138,7 +172,7 @@ namespace MISA.Web07.GD.ndquang.API.NTier
             catch (Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
             }
         }
 
@@ -172,7 +206,7 @@ namespace MISA.Web07.GD.ndquang.API.NTier
             catch (Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
             }
             
 
@@ -219,34 +253,34 @@ namespace MISA.Web07.GD.ndquang.API.NTier
         /// <param name="employee">Đối tượng nhân viên muốn sửa</param>
         /// <returns>ID của nhân viên vừa sửa</returns>
         /// Created by: NDQuang (17/08/2022)
-        [HttpPut("{employeeID}")]
-        [SwaggerResponse(StatusCodes.Status200OK, type: typeof(Guid))]
-        [SwaggerResponse(StatusCodes.Status400BadRequest)]
-        [SwaggerResponse(StatusCodes.Status500InternalServerError)]
-        public IActionResult UpdateEmployee([FromRoute] Guid employeeID, [FromBody] Employee employee)
-        {
-            try
-            {
-                int numberOfAffectedRows = _employeeBL.UpdateEmployee(employeeID, employee);
+        //[HttpPut("{employeeID}")]
+        //[SwaggerResponse(StatusCodes.Status200OK, type: typeof(Guid))]
+        //[SwaggerResponse(StatusCodes.Status400BadRequest)]
+        //[SwaggerResponse(StatusCodes.Status500InternalServerError)]
+        //public IActionResult UpdateEmployee([FromRoute] Guid employeeID, [FromBody] Employee employee)
+        //{
+        //    try
+        //    {
+        //        int numberOfAffectedRows = _employeeBL.UpdateEmployee(employeeID, employee);
 
-                // Xử lý kết quả trả về từ DB
-                if (numberOfAffectedRows > 0)
-                {
-                    // Trả về dữ liệu cho client
-                    return StatusCode(StatusCodes.Status200OK, employeeID);
-                }
-                else
-                {
-                    return StatusCode(StatusCodes.Status400BadRequest, "e002");
-                }
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
-            }
+        //        // Xử lý kết quả trả về từ DB
+        //        if (numberOfAffectedRows > 0)
+        //        {
+        //            // Trả về dữ liệu cho client
+        //            return StatusCode(StatusCodes.Status200OK, employeeID);
+        //        }
+        //        else
+        //        {
+        //            return StatusCode(StatusCodes.Status400BadRequest, "e002");
+        //        }
+        //    }
+        //    catch (Exception exception)
+        //    {
+        //        Console.WriteLine(exception.Message);
+        //        return StatusCode(StatusCodes.Status400BadRequest, "e001");
+        //    }
 
 
-        }
+        //}
     }
 }

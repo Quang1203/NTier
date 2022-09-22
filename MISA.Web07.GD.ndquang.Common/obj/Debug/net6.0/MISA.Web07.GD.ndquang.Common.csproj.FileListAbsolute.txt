@@ -10,3 +10,5 @@ E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.Common\obj\Debug\net6.0\MISA
 E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.Common\obj\Debug\net6.0\refint\MISA.Web07.GD.ndquang.Common.dll
 E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.Common\obj\Debug\net6.0\MISA.Web07.GD.ndquang.Common.pdb
 E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.Common\obj\Debug\net6.0\ref\MISA.Web07.GD.ndquang.Common.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.Common\obj\Debug\net6.0\MISA.Web07.GD.ndquang.Common.Resources.Resource.resources
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.Common\obj\Debug\net6.0\MISA.Web07.GD.ndquang.Common.csproj.GenerateResource.cache

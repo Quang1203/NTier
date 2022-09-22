@@ -41,9 +41,30 @@ namespace MISA.Web07.GD.ndquang.BL
         /// Created by: NDQuang (24/08/2022)
         public Guid InsertOneRecord(T record)
         {
+            // validate dữ liệu:
+            Validate(record);
             return _baseDL.InsertOneRecord(record);
         }
 
+        /// <summary>
+        /// Sửa một bản ghi
+        /// </summary>
+        /// <param name="record">Đối tượng bản ghi cần sửa</param>
+        /// <returns>ID bản ghi được sửa</returns>
+        /// Created by: NDQuang (24/08/2022)
+        public Guid UpdateOneRecord(Guid recordID, T record)
+        { 
+            return _baseDL.UpdateOneRecord(recordID, record);
+        }
+
+        /// <summary>
+        /// Validate dữ liệu
+        /// </summary>
+        /// <param name="record"></param>
+        protected virtual void Validate(T record)
+        {
+
+        }
         #endregion
     }
 }

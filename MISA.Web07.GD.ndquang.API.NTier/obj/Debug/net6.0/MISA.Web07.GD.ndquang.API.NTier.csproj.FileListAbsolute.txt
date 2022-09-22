@@ -34,3 +34,12 @@ E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\obj\Debug\net6.0\r
 E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\obj\Debug\net6.0\MISA.Web07.GD.ndquang.API.NTier.pdb
 E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\obj\Debug\net6.0\MISA.Web07.GD.ndquang.API.NTier.genruntimeconfig.cache
 E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\obj\Debug\net6.0\ref\MISA.Web07.GD.ndquang.API.NTier.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\EPPlus.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\EPPlus.Interfaces.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\System.Drawing.Common.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\MISA\MISA.Web07.gd.ndquang\MISA.Web07.GD.ndquang.API.NTier\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

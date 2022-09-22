@@ -12,9 +12,6 @@ namespace MISA.Web07.GD.ndquang.DL
 {
     public class BaseDL<T> : IBaseDL<T>
 {
-        #region Field
-        protected const string CONNECTION_STRING = "Server=localhost;Port=3306;Database=misa.web07.gd.nguyendangquang;Uid=root;Pwd=123456789;";
-        #endregion
 
         /// <summary>
         /// Lấy tất cả bản ghi  
@@ -23,7 +20,7 @@ namespace MISA.Web07.GD.ndquang.DL
         /// Created by: NDQuang (23/08/2022)
         public virtual IEnumerable<dynamic> GetAllRecords()
         {
-            using (var mySqlConnection = new MySqlConnection(CONNECTION_STRING))
+            using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
             {
 
                 // Chuẩn bị storedProcedureName 
@@ -66,7 +63,7 @@ namespace MISA.Web07.GD.ndquang.DL
             // Thực hiện gọi vào DB để chạy câu lệnh stored procedure với tham số đầu vào ở trên
             int numberOfAffectedRows = 0;
             //using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
-            using (var mySqlConnection = new MySqlConnection(CONNECTION_STRING))
+            using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
             {
                 numberOfAffectedRows = mySqlConnection.Execute(insertStoredProcedureName, parameters, commandType: System.Data.CommandType.StoredProcedure);
                 var result = Guid.Empty;
@@ -90,15 +87,18 @@ namespace MISA.Web07.GD.ndquang.DL
         /// <param name="record">Đối tượng bản ghi cần sửa</param>
         /// <returns>ID của nhân viên vừa sửa</returns>
         /// Created by: NDQuang (24/08/2022)
-        public Guid UpdateOneRecord(T record)
+        public Guid UpdateOneRecord(Guid recordID, T record)
         {
-            // Khai báo tên stored procedure INSERT
+            // Khai báo tên stored procedure Update
             string tableName = EntityUtilities.GetTableName<T>();
-            string insertStoredProcedureName = $"Proc_{tableName}_InsertOne";
+            string updateStoredProcedureName = $"Proc_{tableName}_UpdateOne";
 
             // Chuẩn bị tham số đầu vào của stored procedure
             var properties = typeof(T).GetProperties();
             var parameters = new DynamicParameters();
+            var primaryKeyProperty = typeof(T).GetProperties().FirstOrDefault(prop => prop.GetCustomAttributes(typeof(KeyAttribute), true).Count() > 0);
+            primaryKeyProperty.SetValue(record, recordID);
+
             foreach (var property in properties)
             {
                 string propertyName = $"v_{property.Name}"; // v_DepartmentCode
@@ -109,23 +109,22 @@ namespace MISA.Web07.GD.ndquang.DL
             // Thực hiện gọi vào DB để chạy câu lệnh stored procedure với tham số đầu vào ở trên
             int numberOfAffectedRows = 0;
             //using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
-            using (var mySqlConnection = new MySqlConnection(CONNECTION_STRING))
+            using (var mySqlConnection = new MySqlConnection(DatabaseContext.ConnectionString))
             {
-                numberOfAffectedRows = mySqlConnection.Execute(insertStoredProcedureName, parameters, commandType: System.Data.CommandType.StoredProcedure);
+                numberOfAffectedRows = mySqlConnection.Execute(updateStoredProcedureName, parameters, commandType: System.Data.CommandType.StoredProcedure);
                 var result = Guid.Empty;
                 if (numberOfAffectedRows > 0)
                 {
-                    var primaryKeyProperty = typeof(T).GetProperties().FirstOrDefault(prop => prop.GetCustomAttributes(typeof(KeyAttribute), true).Count() > 0);
-                    var newId = primaryKeyProperty?.GetValue(record);
-                    if (newId != null)
-                    {
-                        result = (Guid)newId;
-                    }
+                    result = (Guid)recordID;
                 }
                 return result;
             }
 
         }
+
+        
+
+
     }
 
 }

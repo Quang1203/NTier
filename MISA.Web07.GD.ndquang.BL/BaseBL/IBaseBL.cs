@@ -22,5 +22,13 @@ namespace MISA.Web07.GD.ndquang.BL
         /// <returns>Số bản ghi bị ảnh hưởng (Thêm mới thành công thì sẽ trả về 1 bản ghi bị ảnh hưởng)</returns>
         /// Created by: NDQuang (24/08/2022)
         public Guid InsertOneRecord(T record);
+
+        /// <summary>
+        /// Sửa một bản ghi
+        /// </summary>
+        /// <param name="record">Đối tượng bản ghi cần sửa</param>
+        /// <returns>ID bản ghi được sửa</returns>
+        /// Created by: NDQuang (24/08/2022)
+        public Guid UpdateOneRecord(Guid recordID, T record);
     }
 }

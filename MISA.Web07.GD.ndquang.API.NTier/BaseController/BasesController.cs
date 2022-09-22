@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MISA.Web07.GD.ndquang.BL;
+using MISA.Web07.GD.ndquang.BL.Exceptions;
+using MISA.Web07.GD.ndquang.Common.Resources;
 
 namespace MISA.Web07.GD.ndquang.API.NTier
 {
@@ -40,7 +42,7 @@ namespace MISA.Web07.GD.ndquang.API.NTier
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
             }
         }
 
@@ -69,8 +71,17 @@ namespace MISA.Web07.GD.ndquang.API.NTier
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status400BadRequest, "e004");
+                    return StatusCode(StatusCodes.Status400BadRequest, Resource.failedOperation);
                 }
+            }
+            catch (ValidateException ex)
+            {
+                var res = new
+                {
+                    devMsg = ex.Message,
+                    userMsg = ex.Data
+                };
+                return StatusCode(StatusCodes.Status400BadRequest, res);
             }
             //catch (MySqlException mySqlException)
             //{
@@ -83,7 +94,43 @@ namespace MISA.Web07.GD.ndquang.API.NTier
             catch (Exception exception)
             {
                 Console.WriteLine(exception.Message);
-                return StatusCode(StatusCodes.Status400BadRequest, "e001");
+                return StatusCode(StatusCodes.Status500InternalServerError, Resource.error_expception);
+            }
+        }
+
+        /// <summary>
+        /// API Sửa một bản ghi
+        /// </summary>
+        /// <param name="record">Đối tượng bản ghi cần sửa</param>
+        /// <param name="recordID">ID Đối tượng bản ghi cần sửa</param>
+        /// <returns>ID bản ghi được sửa</returns>
+        /// Created by: NDQuang (24/08/2022)
+        [HttpPut("{recordID}")]
+        public virtual IActionResult UpdateOneRecord([FromRoute] Guid recordID, [FromBody] T record)
+        {
+            try
+            {
+                //var validateResult = HandleError.ValidateEntity(ModelState, HttpContext);
+                //if (validateResult != null)
+                //{
+                //    return StatusCode(StatusCodes.Status400BadRequest, validateResult);
+                //}
+
+                var ID = _baseBL.UpdateOneRecord(recordID, record);
+
+                if (ID != Guid.Empty)
+                {
+                    return StatusCode(StatusCodes.Status200OK, recordID);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest, Resource.failedOperation);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                return StatusCode(StatusCodes.Status400BadRequest, Resource.error_expception);
             }
         }
 

@@ -25,9 +25,9 @@ namespace MISA.Web07.GD.ndquang.DL
         /// <param name="employee">Đối tượng nhân viên muốn sửa</param>
         /// <returns>ID của nhân viên vừa sửa</returns>
         /// Created by: NDQuang (17/08/2022)
-        public int UpdateEmployee(Guid employeeID, Employee employee);
+        //public int UpdateEmployee(Guid employeeID, Employee employee);
 
-        /// <summary>
+        /// <summary>.
         /// API Thêm mới 1 nhân viên
         /// </summary>
         /// <param name="employee">Đối tượng nhân viên muốn thêm mới</param>
@@ -64,11 +64,19 @@ namespace MISA.Web07.GD.ndquang.DL
         /// Created by: NDQuang (17/08/2022)
         public Employee GetEmployeeByID(Guid employeeID);
 
+
         /// <summary>
         /// Lấy mã nhân viên mới tự động tăng
         /// </summary>
         /// <returns>Mã nhân viên mới tự động tăng</returns>
         /// Created by: NDQuang (17/08/2022)
         public string GetNewEmployeeCode();
+
+        /// <summary>
+        /// Kiểm tra trùng mã nhân viên 
+        /// </summary>
+        /// <returns>Mã nhân viên mới tự động tăng</returns>
+        /// Created by: NDQuang (17/08/2022)
+        public string CheckDuplicateEmployeeCode(string employeeCode);
     }
 }

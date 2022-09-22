@@ -16,7 +16,7 @@ namespace MISA.Web07.GD.ndquang.Common.Entity
         /// ID nhân viên
         /// </summary>
         [Key]
-        public Guid EmployeeID { get; set; }
+        public Guid EmployeeID { get; set; } = Guid.NewGuid();
 
         /// <summary>
         /// Mã nhân viên
@@ -53,7 +53,7 @@ namespace MISA.Web07.GD.ndquang.Common.Entity
         /// <summary>
         /// Email
         /// </summary>
-        [EmailAddress(ErrorMessage = "e009")]
+        //[EmailAddress(ErrorMessage = "e009")]
         public string? Email { get; set; }
 
         /// <summary>
@@ -112,12 +112,32 @@ namespace MISA.Web07.GD.ndquang.Common.Entity
         public string? StorageRoomName { get; set; }
 
         /// <summary>
+        /// Đào tạo QLTB (1: có trình độ, 0: không có trình độ)
+        /// </summary>
+        public int EMT { get; set; }
+
+
+        /// <summary>
         /// Tình trạng làm việc
         /// </summary>
-        //public WorkStatus WorkStatus { get; set; }
+        public WorkStatus WorkStatus { get; set; }
 
-        
-        
+        /// <summary>
+        /// Ngày nghỉ việc
+        /// </summary>
+        public DateTime QuitDate { get; set; }
+
+        /// <summary>
+        /// List môn
+        /// </summary>
+        public List<Subject>? ListSubject { get; set; }
+
+        /// <summary>
+        /// List kho phòng
+        /// </summary>
+        public List<StorageRoom>? ListStorageRoom { get; set; }
+
+      
 
         #endregion
     }
